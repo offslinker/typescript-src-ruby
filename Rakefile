@@ -3,8 +3,10 @@ require 'bundler/gem_tasks'
 require 'rake/testtask'
 
 desc 'download the latest TypeScript source files'
-task 'typescript:download' do
-  sh 'npm', 'install', 'typescript'
+task 'typescript:download' do |t, args|
+  package_name = 'typescript'
+  package_name += '@next' if ENV['pre']
+  sh 'npm', 'install', package_name
 end
 
 desc 'upgrade TypeScript source files'
