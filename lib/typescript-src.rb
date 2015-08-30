@@ -27,7 +27,7 @@ module TypeScript
 
       # @return [Pathname]
       def js_path
-        typescript_path.join('bin/tsc.js')
+        typescript_path.join('lib/tsc.js')
       end
 
       # @return [Pathname]
